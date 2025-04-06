@@ -79,7 +79,10 @@ function Wrapper({
 
         navigator.sendBeacon(appApiUrl, data)
 
-        sessionStorage.setItem('app-api-fetcher', Date.now().toString())
+        sessionStorage.setItem(
+          `app-api-fetcher-${appName}`,
+          Date.now().toString(),
+        )
       }
 
       sendVisitData()
